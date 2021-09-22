@@ -14,10 +14,35 @@ appended to the filename.
 ## Build Executable
 In order to create the executable simply untar the tar file, and run the "make" command. The executable is cs3377dirmond.
 
-For help run ./cs3377dirmond -h
 
-In order to run this program you will need the TCLAP header files as well as the rude library. In addition you will need to change the Makefile
-preprocessor and compiler flags to point to the correct include and lib directories.
+## Usage
+
+```
+
+./dirmond [-d] [--] [--version] [-h] <config filename>
+
+Where:
+-d, --daemon
+	Run in daemon mode (forks to run as a daemon).
+
+--, --ignore_rest
+	Ignores the rest of the labeled arguments following this flag.
+
+--version
+	Displays version information and exits.
+
+-h, --help
+	Displays usage information and exits.
+
+<config filename>
+	The name of the configuration file. Defaults to cs3377dirmond.conf
+ 
+ dirmond Directory Monitor Daemon
+ ```
+## Dependencies
+You'll need to edit the makefile to refelct where you installed these dependencies.
+- rudeconfig 
+- tclap 
 
 ## Additional Functionality
 This program can be run as a daemon by adding the '-d' flag otherwise it runs as a foreground process.
