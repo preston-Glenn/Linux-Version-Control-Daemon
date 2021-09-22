@@ -1,9 +1,15 @@
+# Linux File System Daemon
+
+## Objective
+
+## Build Executable
 In order to create the executable simply untar the tar file, and run the "make" command. The executable is cs3377dirmond.
 In order to terminate the prgoram run "ps" to obtain the process id. Then run "kill -s SIGINT 'pid' "
 The user can also use the command "kill -s SIGINT 'pid' " in order to tell the program to updated its setting from the conf. file.
 
-The program will only update the NumVersions, Verbose, and the LogFile. It will not look at the Paswword or watchDir.
+The program will only update the NumVersions, Verbose, and the LogFile. It will not update the Paswword or watchDir.
 
+## Functionality
 
 
 This program can be run as a daemon by adding the '-d' flag otherwise it runs as a foreground process.
